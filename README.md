@@ -123,41 +123,26 @@ docker run docker.io/library/jpa-native:0.0.1-SNAPSHOT
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.1)
 
-%PARSER_ERROR[d] %PARSER_ERROR[p] 1 --- [%PARSER_ERROR[t]] %PARSER_ERROR[logger] : %PARSER_ERROR[m]%PARSER_ERROR[n]%PARSER_ERROR[d] %PARSER_ERROR[p] 1 --- [%PARSER_ERROR[t]] %PARSER_ERROR[logger] : %PARSER_ERROR[m]%PARSER_ERROR[n]%PARSER_ERROR[d] %PARSER_ERROR[p] 1 --- [%PARSER_ERROR[t]] %PARSER_ERROR[logger] : %PARSER_ERROR[m]%PARSER_ERROR[n]%PARSER_ERROR[d] %PARSER_ERROR[p] 1 --- [%PARSER_ERROR[t]] %PARSER_ERROR[logger] : %PARSER_ERROR[m]%PARSER_ERROR[n]%PARSER_ERROR[d] %PARSER_ERROR[p] 1 --- [%PARSER_ERROR[t]] %PARSER_ERROR[logger] : %PARSER_ERROR[m]%PARSER_ERROR[n]%PARSER_ERROR[d] %PARSER_ERROR[p] 1 --- [%PARSER_ERROR[t]] %PARSER_ERROR[logger] : %PARSER_ERROR[m]%PARSER_ERROR[n]%PARSER_ERROR[d] %PARSER_ERROR[p] 1 --- [%PARSER_ERROR[t]] %PARSER_ERROR[logger] : %PARSER_ERROR[m]%PARSER_ERROR[n]%PARSER_ERROR[d] %PARSER_ERROR[p] 1 --- [%PARSER_ERROR[t]] %PARSER_ERROR[logger] : %PARSER_ERROR[m]%PARSER_ERROR[n]%PARSER_ERROR[d] %PARSER_ERROR[p] 1 --- [%PARSER_ERROR[t]] %PARSER_ERROR[logger] : %PARSER_ERROR[m]%PARSER_ERROR[n]%PARSER_ERROR[d] %PARSER_ERROR[p] 1 --- [%PARSER_ERROR[t]] %PARSER_ERROR[logger] : %PARSER_ERROR[m]%PARSER_ERROR[n]%PARSER_ERROR[d] %PARSER_ERROR[p] 1 --- [%PARSER_ERROR[t]] %PARSER_ERROR[logger] : %PARSER_ERROR[m]%PARSER_ERROR[n]%PARSER_ERROR[d] %PARSER_ERROR[p] 1 --- [%PARSER_ERROR[t]] %PARSER_ERROR[logger] : %PARSER_ERROR[m]%PARSER_ERROR[n]
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Instantiation of supplied bean failed
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.obtainInstanceFromSupplier(AbstractAutowireCapableBeanFactory.java:1236) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.obtainFromSupplier(AbstractAutowireCapableBeanFactory.java:1210) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1157) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[com.example.demo.JpaNativeApplication:3.0.1]
-        at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[com.example.demo.JpaNativeApplication:3.0.1]
-        at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[com.example.demo.JpaNativeApplication:3.0.1]
-        at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[com.example.demo.JpaNativeApplication:3.0.1]
-        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[com.example.demo.JpaNativeApplication:3.0.1]
-        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[com.example.demo.JpaNativeApplication:3.0.1]
-        at com.example.demo.JpaNativeApplication.main(JpaNativeApplication.java:10) ~[com.example.demo.JpaNativeApplication:na]
-Caused by: java.lang.IllegalStateException: No available JtaPlatform candidates amongst [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform, org.hibernate.service.jta.platform.internal.NoJtaPlatform]
-        at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getNoJtaPlatformManager(HibernateJpaConfiguration.java:213) ~[com.example.demo.JpaNativeApplication:3.0.1]
-        at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.configureJtaPlatform(HibernateJpaConfiguration.java:150) ~[com.example.demo.JpaNativeApplication:3.0.1]
-        at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.customizeVendorProperties(HibernateJpaConfiguration.java:139) ~[com.example.demo.JpaNativeApplication:3.0.1]
-        at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:132) ~[com.example.demo.JpaNativeApplication:3.0.1]
-        at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration__BeanDefinitions.lambda$getEntityManagerFactoryInstanceSupplier$3(JpaBaseConfiguration__BeanDefinitions.java:84) ~[na:na]
-        at org.springframework.util.function.ThrowingBiFunction.apply(ThrowingBiFunction.java:68) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.util.function.ThrowingBiFunction.apply(ThrowingBiFunction.java:54) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.beans.factory.aot.BeanInstanceSupplier.lambda$get$2(BeanInstanceSupplier.java:208) ~[na:na]
-        at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:59) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:47) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        at org.springframework.beans.factory.aot.BeanInstanceSupplier.invokeBeanSupplier(BeanInstanceSupplier.java:220) ~[na:na]
-        at org.springframework.beans.factory.aot.BeanInstanceSupplier.get(BeanInstanceSupplier.java:208) ~[na:na]
-        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.obtainInstanceFromSupplier(AbstractAutowireCapableBeanFactory.java:1225) ~[com.example.demo.JpaNativeApplication:6.0.3]
-        ... 18 common frames omitted
+2023-01-05T08:38:44.802Z  INFO 1 --- [           main] com.example.demo.JpaNativeApplication    : Starting AOT-processed JpaNativeApplication using Java 17.0.5 with PID 1 (/workspace/com.example.demo.JpaNativeApplication started by cnb in /workspace)
+2023-01-05T08:38:44.802Z  INFO 1 --- [           main] com.example.demo.JpaNativeApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-01-05T08:38:44.872Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-05T08:38:44.875Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-05T08:38:44.875Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-05T08:38:44.894Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-05T08:38:44.894Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 91 ms
+2023-01-05T08:38:44.904Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-05T08:38:44.921Z  INFO 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:mydb user=SA
+2023-01-05T08:38:44.922Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-05T08:38:44.922Z  INFO 1 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mydb'
+2023-01-05T08:38:44.951Z  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-05T08:38:44.957Z  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-05T08:38:44.963Z  WARN 1 --- [           main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-05T08:38:44.974Z  INFO 1 --- [           main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-05T08:38:45.003Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-05T08:38:45.004Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05T08:38:45.045Z  WARN 1 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-05T08:38:45.134Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05T08:38:45.135Z  INFO 1 --- [           main] com.example.demo.JpaNativeApplication    : Started JpaNativeApplication in 0.37 seconds (process running for 0.405)
+
 
 ```
